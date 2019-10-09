@@ -1,8 +1,8 @@
-import lotteryState from './lottery/state';
-import LotteryMutations from './lottery/mutation';
+import State from './shop/state';
+import Mutations from './shop/mutation';
 
-const state: any = lotteryState;
-const mutations: any = LotteryMutations ;
+const state: any = State;
+const mutations: any = Mutations ;
 
 export default{
   state,

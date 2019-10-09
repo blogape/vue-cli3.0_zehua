@@ -23,13 +23,6 @@ module.exports = {
     // },
 
     configureWebpack: {
-        module: {
-            rules: [{
-                test: /\.js$/, // 处理以.js结尾的文件
-                exclude: /node_modules/, // 处理除了nodde_modules里的js文件
-                loader: 'babel-loader' // 用babel-loader处理
-            }]
-        },
         optimization: {
             minimizer: [
                 new UglifyJsPlugin({
@@ -43,6 +36,13 @@ module.exports = {
                     }
                 })
             ]
+        },
+        module: {
+            rules: [{
+                test: /\.js$/, // 处理以.js结尾的文件
+                exclude: /node_modules/, // 处理除了nodde_modules里的js文件
+                loader: 'babel-loader' // 用babel-loader处理
+            }]
         },
         plugins: [
             new webpack.ProvidePlugin({
@@ -70,3 +70,23 @@ module.exports = {
 //       .add('babel-polyfill')
 //   }
 // }
+
+
+// 配置 移动端rem适配
+// css: {
+//     loaderOptions: {
+//       css: {},
+//       postcss: {
+//         plugins: [
+//           require("postcss-pxtorem")({
+//             rootValue: 37.5,
+//             propList: ["*", "!border*"],
+//             selectorBlackList: ["vux-", "vjs-", "video-", "noToRem"],
+//             replace: true,
+//             mediaQuery: false,
+//             minPixelValue: 0
+//           })
+//         ]
+//       }
+//     }
+//   },

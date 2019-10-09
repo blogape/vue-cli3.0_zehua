@@ -5,7 +5,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { Utils } from "../../config/utils";
-import { Account, Shop } from "../../api/index";
+// import { Account, Shop } from "../../api/index";
 // import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 @Component({
@@ -26,6 +26,7 @@ export default class Home extends Vue {
 
   mounted() {
     // console.log(process.env.VUE_APP_IMAGEPATH);
+    console.log(123333333);
 
     this.getUserData();
     Utils.getStore("name");
